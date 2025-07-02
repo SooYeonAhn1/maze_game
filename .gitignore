@@ -1,0 +1,39 @@
+# Build files
+*.out
+*.o
+*.obj
+*.exe
+*.a
+*.so
+*.dll
+*.dylib
+*.log
+
+# Crow `.deb` or temporary packages
+*.deb
+
+# CMake and Makefile artifacts
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Editor folders
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Binaries
+maze.out
+build/
+bin/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Other
+*.tmp
+*.bak
+*.old

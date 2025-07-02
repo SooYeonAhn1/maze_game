@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Maze Game</title>
+</head>
+<body>
+    <h1>Enter Maze Dimensions</h1>
+    <form action="/start" method="GET">
+        <label>Rows (odd): <input name="rows" type="number" min="3" step="2" required></label><br>
+        <label>Cols (odd): <input name="cols" type="number" min="3" step="2" required></label><br>
+        <button type="submit">Generate Maze</button>
+    </form>
+</body>
+</html>
