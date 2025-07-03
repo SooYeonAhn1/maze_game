@@ -36,4 +36,8 @@ Thumbs.db
 # Other
 *.tmp
 *.bak
+<<<<<<< HEAD
 *.old
+=======
+*.old
+>>>>>>> 59f06a0 (initial server held)

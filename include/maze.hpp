@@ -13,7 +13,10 @@ struct Cell {
 class Maze {
     public:
         Maze() = default;
+        Maze() = default;
         Maze(int row, int col);
+        Maze(const Maze& other);
+        Maze& operator=(const Maze& other);
         Maze(const Maze& other);
         Maze& operator=(const Maze& other);
         void generate();
@@ -28,10 +31,14 @@ class Maze {
     private:
         bool row_bound(int row) const;
         bool col_bound(int row) const;
+        bool row_bound(int row) const;
+        bool col_bound(int row) const;
         std::vector<std::vector<Cell>> maze;
         std::vector<std::vector<int>> path;
         int row;
         int col;
+        int p_row;
+        int p_col;
         int p_row;
         int p_col;
         friend std::ostream& operator<<(std::ostream& os, const Maze& maze);
