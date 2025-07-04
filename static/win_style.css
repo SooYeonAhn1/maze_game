@@ -1,0 +1,23 @@
+body {
+  background-color: rgba(58, 57, 60, 0.082);
+}
+
+h1 {
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+a {
+  color: rgb(10, 6, 246);
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+.center {
+  text-align: center;
+  margin-top: 20px;
+}
+
+p {
+  font-family: verdana;
+}

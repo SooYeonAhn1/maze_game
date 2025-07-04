@@ -73,5 +73,6 @@
         "typeinfo": "cpp",
         "variant": "cpp",
         "C_Cpp.default.cppStandard": "c++20"
-    }
+    },
+    "liveServer.settings.port": 5501
 }
