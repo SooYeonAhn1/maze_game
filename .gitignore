@@ -36,8 +36,39 @@ Thumbs.db
 # Other
 *.tmp
 *.bak
-<<<<<<< HEAD
 *.old
-=======
-*.old
->>>>>>> 59f06a0 (initial server held)
+
+# Build artifacts
+/build/
+maze.out
+*.o
+*.obj
+*.exe
+*.log
+
+# CMake build files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+
+# VSCode settings
+.vscode/
+*.code-workspace
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Backup / temp files
+*~
+*.swp
+*.tmp
+
+# Python virtual environments (if any future scripts)
+venv/
+__pycache__/
+
+# Logs or temp debug files
+*.log
