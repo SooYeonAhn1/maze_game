@@ -45,10 +45,6 @@ Maze& Maze::operator=(const Maze& other) {
 }
 
 void Maze::generate() {
-    // for (auto& rowVec : maze)
-    //     for (auto& cell : rowVec)
-    //         cell.is_wall = true;
-
     auto is_valid = [&](int r, int c) {
         return row_bound(r) && col_bound(c);
     };
@@ -93,12 +89,6 @@ void Maze::generate() {
             for (auto [dr, dc] : {std::pair{-2, 0}, {2, 0}, {0, -2}, {0, 2}}) {
                 frontier(r + dr, c + dc);
             }
-        }
-    }
-
-    for (auto& rows : maze) {
-        for (auto& c : rows) {
-            c.visited = false;
         }
     }
 }
