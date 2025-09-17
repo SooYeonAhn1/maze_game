@@ -1,5 +1,7 @@
 #include <iostream>
-#include "crow.h"
+#include <string>
+#include <fstream>
+#include <sstream>
 #include "crow.h"
 #include "../include/maze.hpp"
 
@@ -9,7 +11,7 @@ int main() {
     Maze maze;
 
     CROW_ROUTE(app, "/")([&] {
-        std::ifstream file("./static/index.html");
+        std::ifstream file("/usr/local/bin//static/index.html");
         if (!file.is_open()) {
             return crow::response(500, "index.html not found");
         }
@@ -42,7 +44,7 @@ int main() {
     });
 
     CROW_ROUTE(app, "/maze")([] {
-        std::ifstream file("./static/maze.html");
+        std::ifstream file("/usr/local/bin/static/maze.html");
         if (!file.is_open()) {
             return crow::response(500, "maze.html not found");
         }
@@ -75,7 +77,7 @@ int main() {
 
     CROW_ROUTE(app, "/static/<string>")
     ([](std::string filename) {
-        std::ifstream file("./static/" + filename);
+        std::ifstream file("/usr/local/bin/static/" + filename);
         if (!file.is_open()) return crow::response(404, "File not found");
 
         std::ostringstream buffer;
@@ -91,12 +93,12 @@ int main() {
 
     CROW_ROUTE(app, "/maze-data")([&] {
         std::ostringstream oss;
-        oss << maze;  // Assuming `maze` is the current state of the maze
+        oss << maze;
         return crow::response(oss.str());
     });
 
     CROW_ROUTE(app, "/win")([] {
-        std::ifstream file("./static/win.html");
+        std::ifstream file("/usr/local/bin/static/win.html");
         if (!file.is_open()) {
             return crow::response(500, "win.html not found");
         }
