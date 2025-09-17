@@ -1,0 +1,6 @@
+build/
+CMakeCache.txt
+CMakeFiles/
+Makefile
+maze.out
+cmake_install.cmake
